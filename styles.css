@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#auth-section, #chat-section {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: red;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#chat-messages {
+  margin-top: 20px;
+  height: 300px;
+  overflow-y: scroll;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #fafafa;
+}
+
+.message {
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: #e5e5e5;
+  transform: perspective(1000px) rotateY(0deg);
+  animation: messageSlideIn 0.5s ease-out;
+}
+
+@keyframes messageSlideIn {
+  0% {
+    transform: translateX(-100%) rotateY(-45deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) rotateY(0);
+    opacity: 1;
+  }
+}
+
+#message-input-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+#message-input {
+  width: 80%;
+  height: 50px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  resize: none;
+  margin-right: 10px;
+  font-size: 1rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+#message-input:focus {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#send-btn {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+#send-btn:hover {
+  background-color: #45a049;
+  transform: scale(1.1);
+}
+
+.btn {
+  transition: transform 0.3s ease;
+}
+
+#send-btn:active {
+  transform: scale(0.95);
+}
+
+#logout-btn:active {
+  transform: scale(0.95);
+}
+
+.hidden {
+  display: none;
+}
+
+#typing-indicator {
+  margin-top: 10px;
+  font-style: italic;
+  color: #999;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

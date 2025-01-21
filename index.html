@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat Application</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Authentication Section -->
+  <div id="auth-section">
+    <h2>Welcome to Chat App</h2>
+    <button id="login-btn" class="btn">Login</button>
+    <button id="signup-btn" class="btn">Sign Up</button>
+  </div>
+
+  <!-- Chat Section -->
+  <div id="chat-section" class="hidden">
+    <div id="chat-header">
+      <h2>Chat Room</h2>
+      <button id="logout-btn" class="btn">Logout</button>
+    </div>
+
+    <div id="chat-messages"></div>
+
+    <div id="message-input-container">
+      <textarea id="message-input" placeholder="Type a message..."></textarea>
+      <button id="send-btn" class="btn">Send</button>
+    </div>
+
+    <div id="typing-indicator" class="hidden">
+      <p>Someone is typing...</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
